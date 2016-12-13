@@ -16,6 +16,7 @@ class HelloWorld
     {
         $sql = "INSERT INTO hello VALUES (" . $this->pdo->quote($what) . ")";
         $this->pdo->query($sql);
+        echo 'thực hiện build thành công';
         return "Hello $what";
     }
 
@@ -24,6 +25,7 @@ class HelloWorld
     {
         $sql = "SELECT what FROM hello";
         $stmt = $this->pdo->query($sql);
+        echo 'thực hiện build thành công 1';
         return $stmt->fetchColumn();
     }
 }
